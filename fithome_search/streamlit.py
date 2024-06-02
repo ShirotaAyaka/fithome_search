@@ -246,7 +246,7 @@ def main():
     with col2:
         # 間取り選択のデフォルト値を2LDKと3LDKに設定
         default_options = ['2LDK', '3LDK']
-        available_options = rows['間取り'].unique()
+        available_options = ['1LDK', '4LDK','2LDK', '3LDK']
         type_options = st.multiselect('■ 間取り選択', available_options, default=[opt for opt in default_options if opt in available_options])
     
     # フィルタリング/フィルタリングされたデータフレームの件数を取得
