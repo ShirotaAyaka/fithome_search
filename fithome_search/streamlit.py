@@ -15,45 +15,6 @@ if 'show_all' not in st.session_state:
 def toggle_show_all():
     st.session_state['show_all'] = not st.session_state['show_all']
 
-# SQLiteからデータを読み込む関数
-def read_data_from_sqlite(db_path='property.db', query='SELECT * FROM SUUMOHOMES'):
-    if not os.path.exists(db_path):
-        print(f"Database file does not exist at {db_path}")
-        return pd.DataFrame()  # 空のDataFrameを返す
-
-    try:
-        conn = sqlite3.connect(db_path)
-        c = conn.cursor()
-
-        # テーブルの存在を確認
-        c.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='SUUMOHOMES';")
-        table_exists = c.fetchone()
-        if not table_exists:
-            print("Table 'SUUMOHOMES' does not exist in the database.")
-            conn.close()
-            return pd.DataFrame()  # 空のDataFrameを返す
-
-        c.execute(query)
-        rows = c.fetchall()
-        # SQLiteの結果をDataFrameに変換
-        df = pd.DataFrame(rows, columns=[desc[0] for desc in c.description])
-        conn.close()
-        return df
-    except sqlite3.OperationalError as e:
-        print(f"OperationalError: {e}")
-        return pd.DataFrame()  # 空のDataFrameを返す
-    except Exception as e:
-        print(f"Unexpected error: {e}")
-        return pd.DataFrame()  # 空のDataFrameを返す
-
-def main():
-    data = read_data_from_sqlite()
-    if not data.empty:
-        # データの表示や処理をここで行う
-        print(data)
-    else:
-        print("No data found or failed to read data from the database.")
-
 
 # SQLiteからデータを読み込む関数
 db_path = 'property.db'
