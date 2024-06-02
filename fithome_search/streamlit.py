@@ -40,7 +40,7 @@ def check_and_set_permissions(db_path):
         return True
 
 # SQLiteからデータを読み込む関数
-def read_data_from_sqlite(db_path='property.db', query='SELECT * FROM SUUMOHOMES'):
+def read_data_from_sqlite(db_path='test.db', query='SELECT * FROM SUUMOHOMES'):
     if not check_and_set_permissions(db_path):
         return pd.DataFrame()  # 空のDataFrameを返す
 
@@ -75,7 +75,7 @@ def read_data_from_sqlite(db_path='property.db', query='SELECT * FROM SUUMOHOMES
         return pd.DataFrame()  # 空のDataFrameを返す
 
 # ヨガ教室の情報を取得する関数
-def read_yoga_data_from_sqlite(db_path='property.db', query='SELECT * FROM LAVA'):
+def read_yoga_data_from_sqlite(db_path='test.db', query='SELECT * FROM LAVA'):
     if not check_and_set_permissions(db_path):
         return pd.DataFrame()  # 空のDataFrameを返す
 
@@ -105,7 +105,7 @@ def read_yoga_data_from_sqlite(db_path='property.db', query='SELECT * FROM LAVA'
         return pd.DataFrame()  # 空のDataFrameを返す
 
 # ジムの情報を取得する関数
-def read_gym_data_from_sqlite(db_path='property.db', query='SELECT * FROM anytime'):
+def read_gym_data_from_sqlite(db_path='test.db', query='SELECT * FROM anytime'):
     if not check_and_set_permissions(db_path):
         return pd.DataFrame()  # 空のDataFrameを返す
 

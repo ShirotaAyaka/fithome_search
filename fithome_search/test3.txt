@@ -1,0 +1,94 @@
+<div class="areasort" id="chiyoda">
+<h3>千代田区</h3><ul>
+<li>
+<a href="/akb/">
+<div class="thumb"><span class="shop-ph" style="background-image:url('https://www.anytimefitness.co.jp/wp/wp-content/uploads/2018/08/DcFe7yqVMAEA-Hx-300x225.jpg');"></span></div>
+<div class="info">
+<p class="name">秋葉原店</p>
+<p class="address">〒101-0021 東京都千代田区外神田2-5-12 タカラビル1F-B1</p>
+<p class="access">JR山手線「秋葉原」駅より徒歩6分　東京メトロ銀座線「末広町」駅より徒歩4分　東京メトロ千代...</p>
+<p class="shop-btn pc"><span>店舗ページ</span></p>
+<div class="shop-icons"><p class="icons-title"><span>設備</span></p>
+<ul class="clearfix">
+<li class="ico-pt"><img alt="パーソナルトレーニング可 Personnal trainer available" src="/assets/img/shop/personnal-trainer.svg" width="38"/></li><li class="ico-tanning"><img alt="タンニングあり Tan service Available" src="/assets/img/shop/tan.svg" width="38"/></li><li class="ico-precor">PRECOR</li></ul>
+</div>
+</div>
+</a>
+</li>
+<li>
+<a href="/uchikanda/">
+<div class="thumb"><span class="shop-ph" style="background-image:url('https://www.anytimefitness.co.jp/wp/wp-content/uploads/2022/01/外観-10-300x225.jpg');"></span></div>
+<div class="info">
+<p class="name">内神田店</p>
+<p class="address">〒101-0047 東京都千代田区内神田1-15-2 神田オーシャンビル B1F</p>
+<p class="access">JR神田駅 徒歩6分　東京メトロ千代田線　新御茶ノ水駅 徒歩6分　都営地下鉄新宿線　小川町駅...</p>
+<p class="shop-btn pc"><span>店舗ページ</span></p>
+<div class="shop-icons"><p class="icons-title"><span>設備</span></p>
+<ul class="clearfix">
+<li class="ico-Wi-Fi"><img alt="WiFiあり Wifi available" src="/assets/img/shop/wifi.svg" width="38"/></li><li class="ico-highpass"><img alt="高校生無料利用可 High school pass available" src="/assets/img/shop/highschoolpass.svg" width="38"/></li><li class="ico-locker"><img alt="" src="" width="38"/></li><li class="ico-tanning"><img alt="タンニングあり Tan service Available" src="/assets/img/shop/tan.svg" width="38"/></li><li class="ico-lifefitness">LifeFitness</li></ul>
+</div>
+</div>
+</a>
+</li>
+<li>
+<a href="/ochanomizu/">
+<div class="thumb"><span class="shop-ph" style="background-image:url('https://www.anytimefitness.co.jp/wp/wp-content/uploads/2023/02/image0-10-300x169.jpeg');"></span></div>
+<div class="info">
+<p class="name">御茶ノ水店</p>
+<p class="address">〒101-0062 東京都千代田区神田駿河台2-1-20 お茶の水ユニオンビル B1F</p>
+<p class="access">御茶ノ水駅　徒歩１分　新御茶ノ水駅　徒歩6分　神保町駅　徒歩７分</p>
+<p class="shop-btn pc"><span>店舗ページ</span></p>
+<div class="shop-icons"><p class="icons-title"><span>設備</span></p>
+<ul class="clearfix">
+<li class="ico-Wi-Fi"><img alt="WiFiあり Wifi available" src="/assets/img/shop/wifi.svg" width="38"/></li><li class="ico-highpass"><img alt="高校生無料利用可 High school pass available" src="/assets/img/shop/highschoolpass.svg" width="38"/></li><li class="ico-pt"><img alt="パーソナルトレーニング可 Personnal trainer available" src="/assets/img/shop/personnal-trainer.svg" width="38"/></li><li class="ico-tanning"><img alt="タンニングあり Tan service Available" src="/assets/img/shop/tan.svg" width="38"/></li><li class="ico-water"><img alt="水素水サーバー Hydrogen water available" src="/assets/img/shop/water.svg" width="38"/></li><li class="ico-protein-server"><img alt="" src="" width="38"/></li><li class="ico-body-composition-monitor"><img alt="" src="" width="38"/></li><li class="ico-lifefitness">LifeFitness</li></ul>
+</div>
+</div>
+</a>
+</li>
+<li>
+<a href="/kudanshita/">
+<div class="thumb"><span class="shop-ph" style="background-image:url('https://www.anytimefitness.co.jp/wp/wp-content/uploads/2022/03/外観斜め2-2-300x169.jpeg');"></span></div>
+<div class="info">
+<p class="name">九段下店</p>
+<p class="address">〒102-0072 東京都千代田区飯田橋1-12-12 九段大和エステート 1-3F</p>
+<p class="access">東京メトロ東西線・半蔵門線「九段下」駅3a出口より徒歩4分　東京メトロ(東西線・有楽町線・南...</p>
+<p class="shop-btn pc"><span>店舗ページ</span></p>
+<div class="shop-icons"><p class="icons-title"><span>設備</span></p>
+<ul class="clearfix">
+<li class="ico-Wi-Fi"><img alt="WiFiあり Wifi available" src="/assets/img/shop/wifi.svg" width="38"/></li><li class="ico-highpass"><img alt="高校生無料利用可 High school pass available" src="/assets/img/shop/highschoolpass.svg" width="38"/></li><li class="ico-pt"><img alt="パーソナルトレーニング可 Personnal trainer available" src="/assets/img/shop/personnal-trainer.svg" width="38"/></li><li class="ico-locker"><img alt="" src="" width="38"/></li><li class="ico-lifefitness">LifeFitness</li></ul>
+</div>
+</div>
+</a>
+</li>
+<li>
+<a href="/koujimati/">
+<div class="thumb"><span class="shop-ph" style="background-image:url('https://www.anytimefitness.co.jp/wp/wp-content/uploads/2017/06/IMG_2313-300x225.jpg');"></span></div>
+<div class="info">
+<p class="name">麹町店</p>
+<p class="address">〒102-0083 東京都千代田区麹町4-8 麹町クリスタルシティ 1F</p>
+<p class="access">有楽町線 麹町駅4番出口から徒歩1分</p>
+<p class="shop-btn pc"><span>店舗ページ</span></p>
+<div class="shop-icons"><p class="icons-title"><span>設備</span></p>
+<ul class="clearfix">
+<li class="ico-Wi-Fi"><img alt="WiFiあり Wifi available" src="/assets/img/shop/wifi.svg" width="38"/></li><li class="ico-highpass"><img alt="高校生無料利用可 High school pass available" src="/assets/img/shop/highschoolpass.svg" width="38"/></li><li class="ico-precor">PRECOR</li></ul>
+</div>
+</div>
+</a>
+</li>
+<li>
+<a href="/iwamoto/">
+<div class="thumb"><span class="shop-ph" style="background-image:url('https://www.anytimefitness.co.jp/wp/wp-content/uploads/2023/06/1-10-300x225.jpg');"></span></div>
+<div class="info">
+<p class="name">千代田岩本町店</p>
+<p class="address">〒101-0032 東京都千代田区岩本町1-6-3 プライム岩本町ビル 1F</p>
+<p class="access">東京メトロ日比谷線「小伝馬町」駅より徒歩3分　JR総武本線「新日本橋」駅より徒歩5分　都営地...</p>
+<p class="shop-btn pc"><span>店舗ページ</span></p>
+<div class="shop-icons"><p class="icons-title"><span>設備</span></p>
+<ul class="clearfix">
+<li class="ico-Wi-Fi"><img alt="WiFiあり Wifi available" src="/assets/img/shop/wifi.svg" width="38"/></li><li class="ico-highpass"><img alt="高校生無料利用可 High school pass available" src="/assets/img/shop/highschoolpass.svg" width="38"/></li><li class="ico-pt"><img alt="パーソナルトレーニング可 Personnal trainer available" src="/assets/img/shop/personnal-trainer.svg" width="38"/></li><li class="ico-body-composition-monitor"><img alt="" src="" width="38"/></li><li class="ico-lifefitness">LifeFitness</li><li class="ico-precor">PRECOR</li></ul>
+</div>
+</div>
+</a>
+</li>
+</ul>
+</div>
