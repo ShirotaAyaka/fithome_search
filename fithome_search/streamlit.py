@@ -24,6 +24,15 @@ def read_data_from_sqlite(db_path='property.db', query='SELECT * FROM SUUMOHOMES
     try:
         conn = sqlite3.connect(db_path)
         c = conn.cursor()
+
+        # テーブルの存在を確認
+        c.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='SUUMOHOMES';")
+        table_exists = c.fetchone()
+        if not table_exists:
+            print("Table 'SUUMOHOMES' does not exist in the database.")
+            conn.close()
+            return pd.DataFrame()  # 空のDataFrameを返す
+
         c.execute(query)
         rows = c.fetchall()
         # SQLiteの結果をDataFrameに変換
