@@ -246,9 +246,8 @@ def main():
     with col2:
         # 間取り選択のデフォルト値を2LDKと3LDKに設定
         default_options = ['2LDK', '3LDK']
-        available_options = ['1LDK', '4LDK','2LDK', '3LDK']
+        available_options = rows['間取り'].unique()
         type_options = st.multiselect('■ 間取り選択', available_options, default=[opt for opt in default_options if opt in available_options])
-    
     # フィルタリング/フィルタリングされたデータフレームの件数を取得
     filtered_rows = rows[(rows['区'].isin([area])) & (rows['間取り'].isin(type_options))]
     filtered_rows = filtered_rows[(filtered_rows['家賃'] >= price_min) & (filtered_rows['家賃'] <= price_max)]
