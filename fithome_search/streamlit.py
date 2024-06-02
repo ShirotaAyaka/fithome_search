@@ -28,15 +28,16 @@ def check_and_set_permissions(db_path):
         st.write(f"Database file does not exist at {db_path}")
         return False
     else:
-        st.write(f"Database file found at {db_path}")
+        # デバッグ情報の表示をコメントアウト
+        # st.write(f"Database file found at {db_path}")
         
         # ファイルの権限を確認
         file_permissions = os.stat(db_path).st_mode
-        st.write(f"File permissions: {oct(file_permissions)}")
+        # st.write(f"File permissions: {oct(file_permissions)}")
         
         # 読み取り/書き込み権限を設定
         os.chmod(db_path, stat.S_IRUSR | stat.S_IWUSR | stat.S_IRGRP | stat.S_IWGRP)
-        st.write(f"Updated file permissions: {oct(os.stat(db_path).st_mode)}")
+        # st.write(f"Updated file permissions: {oct(os.stat(db_path).st_mode)}")
         return True
 
 # SQLiteからデータを読み込む関数
@@ -51,7 +52,8 @@ def read_data_from_sqlite(db_path='test.db', query='SELECT * FROM SUUMOHOMES'):
         # データベース内のすべてのテーブルを表示
         c.execute("SELECT name FROM sqlite_master WHERE type='table';")
         tables = c.fetchall()
-        st.write("Tables in the database:", tables)
+        # デバッグ情報の表示をコメントアウト
+        # st.write("Tables in the database:", tables)
 
         # テーブルの存在を確認
         c.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='SUUMOHOMES';")
@@ -212,8 +214,9 @@ def display_search_results(filtered_rows):
     
 # メインのアプリケーション
 def main():
-    st.write("Current working directory:", os.getcwd())
-    st.write("Files and directories in the current directory:", os.listdir('.'))
+    # デバッグ情報の表示をコメントアウト
+    # st.write("Current working directory:", os.getcwd())
+    # st.write("Files and directories in the current directory:", os.listdir('.'))
 
     rows = read_data_from_sqlite()
     yoga_rows = read_yoga_data_from_sqlite()
