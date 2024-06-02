@@ -8,6 +8,12 @@ import folium
 from streamlit_folium import folium_static
 import stat
 
+# データベース初期化スクリプトのインポート
+from init_db import initialize_db
+
+# データベースを初期化
+initialize_db()
+
 # セッション状態の初期化
 if 'show_all' not in st.session_state:
     st.session_state['show_all'] = False #初期状態は地図状態の物件のみを表示
