@@ -40,101 +40,54 @@ def check_and_set_permissions(db_path):
         # st.write(f"Updated file permissions: {oct(os.stat(db_path).st_mode)}")
         return True
 
-# SQLiteからデータを読み込む関数
-def read_data_from_sqlite(db_path='test.db', query='SELECT * FROM SUUMOHOMES'):
-    if not check_and_set_permissions(db_path):
-        return pd.DataFrame()  # 空のDataFrameを返す
 
-    try:
-        conn = sqlite3.connect(db_path)
-        c = conn.cursor()
+# 現在のファイルディレクトリの情報を取得
+current_dir = os.path.dirname(os.path.abspath(__file__))
+# 上記を基準として、データベースファイルへのパスを通す
+db_path = os.path.join(current_dir, 'property.db')
+query = 'SELECT * FROM SUUMOHOMES'
+def read_data_from_sqlite(db_path=db_path, query='SELECT * FROM SUUMOHOMES'):
+    conn = sqlite3.connect(db_path)
+    c = conn.cursor()
+    c.execute(query)
+    rows = c.fetchall()
+    conn.close()
+    # SQLiteの結果をDataFrameに変換
+    rows = pd.DataFrame(rows,columns=[desc[0] for desc in c.description])
+    return rows
 
-        # データベース内のすべてのテーブルを表示
-        c.execute("SELECT name FROM sqlite_master WHERE type='table';")
-        tables = c.fetchall()
-        # デバッグ情報の表示をコメントアウト
-        # st.write("Tables in the database:", tables)
 
-        # テーブルの存在を確認
-        c.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='SUUMOHOMES';")
-        table_exists = c.fetchone()
-        if not table_exists:
-            st.write("Table 'SUUMOHOMES' does not exist in the database.")
-            conn.close()
-            return pd.DataFrame()  # 空のDataFrameを返す
 
-        c.execute(query)
-        rows = c.fetchall()
-        # SQLiteの結果をDataFrameに変換
-        df = pd.DataFrame(rows, columns=[desc[0] for desc in c.description])
-        conn.close()
-        return df
-    except sqlite3.OperationalError as e:
-        st.write(f"OperationalError: {e}")
-        return pd.DataFrame()  # 空のDataFrameを返す
-    except Exception as e:
-        st.write(f"Unexpected error: {e}")
-        return pd.DataFrame()  # 空のDataFrameを返す
+#ヨガ教室の情報を取得
+current_dir = os.path.dirname(os.path.abspath(__file__))
+# 上記を基準として、データベースファイルへのパスを通す
+db_path = os.path.join(current_dir, 'property.db')
+query = 'SELECT * FROM LAVA'
+def read_yoga_data_from_sqlite(db_path=db_path, query='SELECT * FROM LAVA'):
+    conn = sqlite3.connect(db_path)
+    c = conn.cursor()
+    c.execute(query)
+    rows = c.fetchall()
+    conn.close()
+    # SQLiteの結果をDataFrameに変換
+    rows = pd.DataFrame(rows,columns=[desc[0] for desc in c.description])
+    return rows
 
-# ヨガ教室の情報を取得する関数
-def read_yoga_data_from_sqlite(db_path='test.db', query='SELECT * FROM LAVA'):
-    if not check_and_set_permissions(db_path):
-        return pd.DataFrame()  # 空のDataFrameを返す
 
-    try:
-        conn = sqlite3.connect(db_path)
-        c = conn.cursor()
-
-        # テーブルの存在を確認
-        c.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='LAVA';")
-        table_exists = c.fetchone()
-        if not table_exists:
-            st.write("Table 'LAVA' does not exist in the database.")
-            conn.close()
-            return pd.DataFrame()  # 空のDataFrameを返す
-
-        c.execute(query)
-        rows = c.fetchall()
-        # SQLiteの結果をDataFrameに変換
-        df = pd.DataFrame(rows, columns=[desc[0] for desc in c.description])
-        conn.close()
-        return df
-    except sqlite3.OperationalError as e:
-        st.write(f"OperationalError: {e}")
-        return pd.DataFrame()  # 空のDataFrameを返す
-    except Exception as e:
-        st.write(f"Unexpected error: {e}")
-        return pd.DataFrame()  # 空のDataFrameを返す
-
-# ジムの情報を取得する関数
-def read_gym_data_from_sqlite(db_path='test.db', query='SELECT * FROM anytime'):
-    if not check_and_set_permissions(db_path):
-        return pd.DataFrame()  # 空のDataFrameを返す
-
-    try:
-        conn = sqlite3.connect(db_path)
-        c = conn.cursor()
-
-        # テーブルの存在を確認
-        c.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='anytime';")
-        table_exists = c.fetchone()
-        if not table_exists:
-            st.write("Table 'anytime' does not exist in the database.")
-            conn.close()
-            return pd.DataFrame()  # 空のDataFrameを返す
-
-        c.execute(query)
-        rows = c.fetchall()
-        # SQLiteの結果をDataFrameに変換
-        df = pd.DataFrame(rows, columns=[desc[0] for desc in c.description])
-        conn.close()
-        return df
-    except sqlite3.OperationalError as e:
-        st.write(f"OperationalError: {e}")
-        return pd.DataFrame()  # 空のDataFrameを返す
-    except Exception as e:
-        st.write(f"Unexpected error: {e}")
-        return pd.DataFrame()  # 空のDataFrameを返す
+#ジムの情報を取得
+current_dir = os.path.dirname(os.path.abspath(__file__))
+# 上記を基準として、データベースファイルへのパスを通す
+db_path = os.path.join(current_dir, 'property.db')
+query = 'SELECT * FROM anytime'
+def read_gym_data_from_sqlite(db_path=db_path, query='SELECT * FROM anytime'):
+    conn = sqlite3.connect(db_path)
+    c = conn.cursor()
+    c.execute(query)
+    rows = c.fetchall()
+    conn.close()
+    # SQLiteの結果をDataFrameに変換
+    rows = pd.DataFrame(rows,columns=[desc[0] for desc in c.description])
+    return rows
 
 # 地図を作成、マーカーを追加する関数
 def create_map(filtered_rows, yoga_rows, gym_rows):
