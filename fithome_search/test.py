@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # 環境変数から認証情報を取得
-API_KEY = 
+API_KEY ="AIzaSyAP6BdXTSR0Bna3epQX925xm_p9qn_D68g" 
 
 base_url = "https://www.homes.co.jp/chintai/tokyo/minato-city/list/?page={}"
 max_page = 5
