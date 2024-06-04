@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # 環境変数から認証情報を取得
-API_KEY ="AIzaSyAP6BdXTSR0Bna3epQX925xm_p9qn_D68g" 
+API_KEY ="" 
 
 base_url = "https://www.homes.co.jp/chintai/tokyo/minato-city/list/?page={}"
 max_page = 5
@@ -169,7 +169,7 @@ for page in range(1, max_page + 1):
             data["間取画像URL"] = floor_plan_image_element.img["rel"] if floor_plan_image_element and floor_plan_image_element.img else None
 
             property_link_element = item.select_one("a[href*='/chintai/jnc_']")
-            data["物件詳細URL"] = "https://suumo.jp/jj/chintai/ichiran/FR301FC001/?ar=030&bs=040&pc=30&smk=&po1=25&po2=99&shkr1=03&shkr2=03&shkr3=03&shkr4=03&sc=13103&sc=13113&sc=13109&sc=13111&ta=13&cb=0.0&ct=9999999&et=9999999&mb=0&mt=9999999&cn=30&fw2=" +property_link_element['href'] if property_link_element else None ## 不動産サイトから詳細URLリンクを読み解き作成
+            data["物件詳細URL"] = "https://suumo.jp" +property_link_element['href'] if property_link_element else None ## 不動産サイトから詳細URLリンクを読み解き作成
 
             all_data.append(data)
 
