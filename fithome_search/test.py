@@ -162,13 +162,13 @@ for page in range(1, max_page + 1):
             data["面積"]   = tbody.select_one(".cassetteitem_menseki").get_text(strip=True) if tbody.select_one(".cassetteitem_menseki") else None
 
             # 物件画像・間取り画像・詳細URLの取得を最後に行う
-            property_image_element = item.find(class_="cassetteitem_object-item")
+            property_image_element = tbody.find(class_="cassetteitem_object-item")
             data["物件画像URL"] = property_image_element.img["rel"] if property_image_element and property_image_element.img else None
 
-            floor_plan_image_element = item.find(class_="casssetteitem_other-thumbnail")
+            floor_plan_image_element = tbody.find(class_="casssetteitem_other-thumbnail")
             data["間取画像URL"] = floor_plan_image_element.img["rel"] if floor_plan_image_element and floor_plan_image_element.img else None
 
-            property_link_element = item.select_one("a[href*='/chintai/jnc_']")
+            property_link_element = tbody.select_one("a[href*='/chintai/jnc_']")
             data["物件詳細URL"] = "https://suumo.jp" +property_link_element['href'] if property_link_element else None ## 不動産サイトから詳細URLリンクを読み解き作成
 
             all_data.append(data)
