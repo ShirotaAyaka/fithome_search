@@ -161,7 +161,9 @@ def display_search_results(filtered_rows):
     # 物件番号を含む新しい列を作成
     filtered_rows['物件番号'] = range(1, len(filtered_rows)+1)
     filtered_rows['物件詳細URL'] = filtered_rows['物件詳細URL'].apply(lambda x: make_clickable(x,"リンク"))
-    display_columns = ['物件番号','名称','アドレス','階数', '家賃', '間取り','物件詳細URL']
+    filtered_rows['物件画像'] = filtered_rows['物件画像URL'].apply(lambda x: f'<img src="{x}" width="100">')
+    filtered_rows['間取画像'] = filtered_rows['間取画像URL'].apply(lambda x: f'<img src="{x}" width="100">')
+    display_columns = ['物件番号','名称','アドレス','階数', '家賃', '間取り','物件画像','間取画像','物件詳細URL']
     filtered_rows_display = filtered_rows[display_columns]
     st.markdown(filtered_rows_display.to_html(escape=False, index=False), unsafe_allow_html=True)
     
