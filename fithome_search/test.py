@@ -162,7 +162,7 @@ for page in range(1, max_page + 1):
             data["面積"]   = tbody.select_one(".cassetteitem_menseki").get_text(strip=True) if tbody.select_one(".cassetteitem_menseki") else None
 
             # 物件画像・間取り画像・詳細URLの取得を最後に行う
-            property_image_element = tbody.find(class_="cassetteitem_object-item")
+            property_image_element = item.find(class_="cassetteitem_object-item")
             data["物件画像URL"] = property_image_element.img["rel"] if property_image_element and property_image_element.img else None
 
             floor_plan_image_element = tbody.find(class_="casssetteitem_other-thumbnail")
